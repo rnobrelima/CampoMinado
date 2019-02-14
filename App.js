@@ -3,7 +3,10 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, Alert} from 'react-native';
 import params from './src/params'
 import MineField from './src/Components/MineField'
+import Header from './src/Components/Header'
+import LevelSelection from './src/Screen/LevelSelection'
 import {createMinedBoard,cloneBoard,openField,hadExplosion,wonGame,showMines,invertFlag,flagsUsed} from './src/logic'
+
 
 
 
@@ -27,7 +30,8 @@ export default class App extends Component{
     return {
       board : createMinedBoard(rows, cols, this.minesAmount()),
       won: false,
-      lost: false
+      lost: false,
+      showLevelSelection: false
     }
   }
 
@@ -60,10 +64,22 @@ export default class App extends Component{
     this.setState({ board, won })
   }
 
+    onLevelSelected = level => {
+      params.difficultLevel = level 
+      this.setState(this.createState())
+    }
+
 
   render() {
     return (
       <View style={styles.container}>
+      <LevelSelection isVisible={this.state.showLevelSelection}
+          onLevelSelected={this.onLevelSelected}
+          onCancel={() => this.setState({ showLevelSelection: false })} />
+        <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
+        onNewGame={() => this.setState(this.createState())}  
+        onFlagPress={() => this.setState({ showLevelSelection: true })} />
+      
             <View style={styles.board}>
             <MineField board={this.state.board} 
              onOpenField={this.onOpenField}
