@@ -1,0 +1,4 @@
+#Thu Feb 14 20:33:22 BRST 2019
+base.0=/home/nobre/Native/CampoMinado/android/app/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

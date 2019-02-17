@@ -83,9 +83,9 @@ MERGED from [org.webkit:android-jsc:r174650] /home/nobre/.gradle/caches/transfor
 	android:label
 		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:9:7-39
 	android:roundIcon
-		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:11:7-52
+		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:11:7-41
 	android:icon
-		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:10:7-41
+		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:10:7-36
 	android:allowBackup
 		ADDED from /home/nobre/Native/CampoMinado/android/app/src/main/AndroidManifest.xml:12:7-34
 	android:theme
